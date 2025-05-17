@@ -51,45 +51,61 @@
     </aside>
 
     <section id="ilgialanlarim" class="mt-5">
-      <h2>İlgi Alanlarım</h2>
-      <p>Sanatçılardan Pilli Bebek'in albümlerini dinlemekten hoşlanırım.</p>
-      <button onclick="muzikGetir()" class="btn btn-info mb-3">Albüm Verilerini Getir</button>
-      <div id="apiSonucu" class="row"></div>
-    </section>
+  <h2>İlgi Alanlarım</h2>
+  <p>Dinlemekten keyif aldığım bazı Pilli Bebek parçaları:</p>
+  <button onclick="pilliBebekGetir()" class="btn btn-success mb-3">Şarkıları Göster</button>
+  <div id="apiSonucu" class="row"></div>
+</section>
   </main>
 
   <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Ayşe Yılmaz</p>
+    <p>&copy; 2025 Enes Çağrı ÇALIŞKAN</p>
   </footer>
 
-  <script>
-    function muzikGetir() {
-      fetch("https://itunes.apple.com/search?term=taylor+swift&entity=album&limit=4")
-        .then(res => res.json())
-        .then(data => {
-          const alan = document.getElementById("apiSonucu");
-          alan.innerHTML = "";
-          data.results.forEach(album => {
-            alan.innerHTML += `
-              <div class="col-md-3">
-                <div class="card mb-4">
-                  <img src="${album.artworkUrl100}" class="card-img-top" alt="${album.collectionName}">
-                  <div class="card-body">
-                    <h5 class="card-title">${album.collectionName}</h5>
-                    <p class="card-text">${album.artistName}</p>
-                    <a href="${album.collectionViewUrl}" target="_blank" class="btn btn-primary btn-sm">Detay</a>
-                  </div>
-                </div>
+ <script>
+function pilliBebekGetir() {
+  fetch("https://itunes.apple.com/search?term=pilli+bebek&entity=song&limit=50")
+    .then(res => res.json())
+    .then(data => {
+      const istediklerim = ["Bak (Akustik)", "Olsun", "Haram Geceler", "Bak"];
+      const filtrelenmis = data.results.filter(song =>
+        istediklerim.includes(song.trackName)
+      );
+
+      const alan = document.getElementById("apiSonucu");
+      alan.innerHTML = "";
+
+      if (filtrelenmis.length === 0) {
+        alan.innerHTML = "<p>Şarkılar bulunamadı. API'den geçici olarak erişilemiyor olabilir.</p>";
+        return;
+      }
+
+      filtrelenmis.forEach(song => {
+        alan.innerHTML += `
+          <div class="col-md-6 col-lg-4">
+            <div class="card mb-4 shadow">
+              <img src="${song.artworkUrl100}" class="card-img-top" alt="${song.trackName}">
+              <div class="card-body">
+                <h5 class="card-title">${song.trackName}</h5>
+                <p class="card-text">${song.artistName}</p>
+                ${song.previewUrl ? `
+                  <audio controls class="w-100">
+                    <source src="${song.previewUrl}" type="audio/mpeg">
+                    Tarayıcınız bu özelliği desteklemiyor.
+                  </audio>
+                ` : "<p>Önizleme bulunamadı.</p>"}
               </div>
-            `;
-          });
-        })
-        .catch(err => {
-          document.getElementById("apiSonucu").innerHTML = "Veri alınamadı.";
-          console.error(err);
-        });
-    }
-  </script>
+            </div>
+          </div>
+        `;
+      });
+    })
+    .catch(err => {
+      document.getElementById("apiSonucu").innerHTML = "API'den veri alınamadı!";
+      console.error(err);
+    });
+}
+</script>
 
 </body>
 </html>
