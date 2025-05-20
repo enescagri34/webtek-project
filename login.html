@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  <div id="navbar-container"></div>
+
+  <!-- sayfa içeriği -->
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+
 
   <div class="container my-5">
     <h2 class="text-center mb-4">Giriş Sayfası</h2>

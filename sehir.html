@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  <div id="navbar-container"></div>
+
+  <!-- sayfa içeriği -->
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+
 
   <header class="bg-dark text-white text-center py-4">
     <h1>Düzce</h1>

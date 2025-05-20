@@ -9,23 +9,20 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Enes Çağrı ÇALIŞKAN</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Hakkımda</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
-          <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  
+  <div id="navbar-container"></div>
+
+  <!-- sayfa içeriği -->
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+
+
 
   <header class="bg-light text-center py-5">
     <h1>Merhaba, ben Enes Çağrı!</h1>
