@@ -1,48 +1,46 @@
-/* Genel yazı tipi ve sayfa rengi */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
 }
 
-/* Başlık stilleri */
 h1, h2, h3 {
-  font-weight: 600;
-  color: #2c3e50;
+  font-weight: 700;
+  color: #1e3a8a;
 }
 
-/* Footer */
-footer {
-  background-color: #343a40;
-  color: white;
-  padding: 20px;
-  font-size: 14px;
+.navbar {
+  transition: all 0.3s ease-in-out;
 }
 
-/* Galeri görselleri */
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+button, .btn {
+  border-radius: 8px;
+}
+
 img {
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 img:hover {
-  transform: scale(1.03);
-}
-
-/* Form hata görseli */
-.is-invalid {
-  border: 2px solid red;
-}
-
-/* Form kartları */
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Butonlar için hover */
-button:hover {
-  opacity: 0.9;
-  transition: 0.
+  transform: scale(1.02);
 }
