@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Enes Çağrı ÇALIŞKAN - Hakkımda</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Özel Stil -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome İkonlar -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  
+  <!-- Ortak Navbar -->
   <div id="navbar-container"></div>
-
-  <!-- sayfa içeriği -->
-
   <script>
     fetch("header.html")
       .then(res => res.text())
@@ -22,28 +24,21 @@
       });
   </script>
 
-
-
-  <header class="bg-light text-center py-5">
-    <h1>Merhaba, ben Enes Çağrı!</h1>
+  <!-- Başlık -->
+  <header class="text-center py-5">
+    <h1 class="text-success">Enes Çağrı ÇALIŞKAN</h1>
     <p class="lead">Kendimi tanıttığım kişisel web siteme hoş geldiniz.</p>
   </header>
 
-  <section class="container my-5">
+  <!-- Hakkımda -->
+  <section class="container mt-4">
     <h2>Hakkımda</h2>
     <p>Ben Enes Çağrı ÇALIŞKAN. Sakarya Üniversitesi'nde öğrenciyim. Boş zamanlarımda <strong>yürüyüş yapmayı</strong>, <strong>müzik dinlemeyi</strong> ve <strong>kahve içmeyi</strong> çok seviyorum.</p>
-
-    <h3>Sevdiğim Spor</h3>
     <p>Bisikletle uzun yol yapmayı çok severim.</p>
-
-    <h3>Bağlantılarım</h3>
-    <ul>
-      <li><a href="https://github.com/cagricaliskan" target="_blank">GitHub</a></li>
-      <li><a href="https://instagram.com/enescagri0" target="_blank">Instagram</a></li>
-    </ul>
   </section>
 
-  <section class="container my-5">
+  <!-- Galeri -->
+  <section class="container mt-5">
     <h3>Galeri</h3>
     <div class="row">
       <div class="col-md-4">
@@ -58,10 +53,28 @@
     </div>
   </section>
 
+  <!-- Bağlantılarım -->
+  <section class="container mt-5 mb-4">
+    <h2 class="text-success text-center mb-4">Bağlantılarım</h2>
+    <div class="d-flex justify-content-center gap-4 flex-wrap fs-4">
+      <a href="https://github.com/enescagri" target="_blank" class="text-decoration-none text-light">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com/in/enescagri" target="_blank" class="text-decoration-none text-light">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://instagram.com/enescagri" target="_blank" class="text-decoration-none text-light">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; Tüm hakları saklıdır - 2025 Enes Çağrı ÇALIŞKAN</p>
+    <p>&copy; 2025 Tüm hakları saklıdır - Enes Çağrı ÇALIŞKAN</p>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

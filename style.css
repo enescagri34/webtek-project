@@ -1,46 +1,68 @@
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  background-color: #111;
+  color: #f1f1f1;
+  font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3 {
+  color: #00ff88;
   font-weight: 700;
-  color: #1e3a8a;
+}
+
+a {
+  color: #00ff88;
 }
 
 .navbar {
-  transition: all 0.3s ease-in-out;
+  background-color: #000 !important;
+  border-bottom: 2px solid #00ff88;
 }
 
 .navbar .nav-link {
-  font-weight: 500;
-  transition: color 0.2s;
+  color: #ccc !important;
+  transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  color: #ffc107;
+  color: #00ff88 !important;
 }
 
 .card {
-  border: none;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-button, .btn {
-  border-radius: 8px;
-}
-
-img {
-  border-radius: 8px;
+  background-color: #1a1a1a;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px #00ff8844;
   transition: transform 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #00ff8899;
+}
+
+button, .btn {
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #00e676;
+}
+
+img {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
 img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #000;
+  color: #00ff88;
+  padding: 20px;
 }
