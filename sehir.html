@@ -6,13 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .slider-img {
+      height: 360px;
+      object-fit: cover;
+    }
+    .carousel-caption h5 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    section h2 {
+      font-weight: 600;
+      color: #00ff88;
+      margin-top: 30px;
+      border-bottom: 2px solid #00ff88;
+      padding-bottom: 6px;
+    }
+  </style>
 </head>
-<body>
-  
+<body class="bg-black text-white">
   <div id="navbar-container"></div>
-
-  <!-- sayfa içeriği -->
-
   <script>
     fetch("header.html")
       .then(res => res.text())
@@ -21,17 +36,31 @@
       });
   </script>
 
-
-  <div id="sehirSlider" class="carousel slide container my-5" data-bs-ride="carousel">
-    <div class="carousel-inner">
+  <div id="sehirSlider" class="carousel slide container mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner rounded">
       <div class="carousel-item active">
-        <a href="#konuralp"><img src="img/konuralp.jpg" class="d-block w-100" alt="Konuralp Antik Tiyatrosu"></a>
+        <a href="#konuralp">
+          <img src="img/konuralp.jpg" class="d-block w-100 slider-img" alt="Konuralp Antik Tiyatrosu">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Konuralp Antik Tiyatrosu</h5>
+          </div>
+        </a>
       </div>
       <div class="carousel-item">
-        <a href="#guzeldere"><img src="img/guzeldere.jpg" class="d-block w-100" alt="Güzeldere Şelalesi"></a>
+        <a href="#guzeldere">
+          <img src="img/guzeldere.jpg" class="d-block w-100 slider-img" alt="Güzeldere Şelalesi">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Güzeldere Şelalesi</h5>
+          </div>
+        </a>
       </div>
       <div class="carousel-item">
-        <a href="#aydinpinar"><img src="img/aydinpinar.jpg" class="d-block w-100" alt="Aydınpınar Şelalesi"></a>
+        <a href="#aydinpinar">
+          <img src="img/aydinpinar.jpg" class="d-block w-100 slider-img" alt="Aydınpınar Şelalesi">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Aydınpınar Şelalesi</h5>
+          </div>
+        </a>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
@@ -42,7 +71,7 @@
     </button>
   </div>
 
-  <main class="container my-5">
+  <main class="container my-5 bg-dark p-4 rounded">
     <section>
       <h2>Nüfus</h2>
       <p>Düzce'nin 2023 itibarıyla nüfusu yaklaşık 405.000'dir. Karadeniz ile Marmara arasında yer alır.</p>
@@ -64,8 +93,13 @@
     </section>
   </main>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Enes Çağrı ÇALIŞKAN</p>
+  <footer class="bg-black text-success text-center py-4">
+    <p class="mb-1">&copy; 2025 Enes Çağrı ÇALIŞKAN</p>
+    <div class="fs-4">
+      <a href="https://github.com/enescagri" class="text-success me-3"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/enescagri" class="text-success me-3"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/enescagri" class="text-success"><i class="fab fa-instagram"></i></a>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
