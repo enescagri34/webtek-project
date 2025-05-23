@@ -37,14 +37,14 @@ Amaç, HTML, CSS, JavaScript, Bootstrap ve PHP teknolojilerini kullanarak dinami
 - PHP
 - Git & GitHub
 - Ücretsiz API (iTunes Search API – İlgi alanları için)
-- Hosting: [Acil Host](www.acilhost.com)
+- Hosting: [Hosting Dünyam](www.hostingdunyam.net)
 
 ---
 
 ## 🌐 Canlı Önizleme
 
 📌 Proje Yayın Linki:  
-[www.enescagricaliskan.com.tr](www.enescagricaliskan.com.tr)
+[www.enescagri.online](www.enescagri.online)
 
 ---
 
