@@ -37,7 +37,7 @@
 <body class="bg-black text-white">
   <div id="navbar-container"></div>
   <script>
-    fetch("header.html")
+    fetch("header.php")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-container").innerHTML = data;

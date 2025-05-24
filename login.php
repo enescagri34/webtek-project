@@ -1,19 +1,32 @@
 <?php
-// Doğru kullanıcı bilgileri (örnek)
-$dogru_kullanici = "b2412100001@sakarya.edu.tr";
-$dogru_sifre = "b2412100001";
+session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-// POST ile gelen verileri al
-$kullanici = $_POST["kullanici"] ?? "";
-$sifre = $_POST["sifre"] ?? "";
+    $file = 'users.txt';
+    $found = false;
 
-// Kontrol işlemi
-if ($kullanici === $dogru_kullanici && $sifre === $dogru_sifre) {
-    $ogrenci_no = explode("@", $kullanici)[0];
-    echo "<h2 style='text-align:center; margin-top: 50px;'>Hoş geldiniz <strong>$ogrenci_no</strong>!</h2>";
+    if (file_exists($file)) {
+        $lines = file($file, FILE_IGNORE_NEW_LINES);
+        foreach ($lines as $line) {
+            list($storedUser, $storedPass, $storedName) = explode('|', $line);
+            if ($storedUser === $username && $storedPass === $password) {
+                $_SESSION['username'] = $username;
+                $_SESSION['fullname'] = $storedName;
+                $found = true;
+                break;
+            }
+        }
+    }
+
+    if ($found) {
+        header('Location: index.html');
+        exit;
+    } else {
+        echo '<h2>Geçersiz kullanıcı adı veya şifre</h2>';
+    }
 } else {
-    // Hatalıysa login sayfasına geri yönlendir
-    header("Location: login.html");
-    exit();
+    echo 'Geçersiz istek.';
 }
 ?>
