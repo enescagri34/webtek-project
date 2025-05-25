@@ -37,14 +37,14 @@ Amaç, HTML, CSS, JavaScript, Bootstrap ve PHP teknolojilerini kullanarak dinami
 - PHP
 - Git & GitHub
 - Ücretsiz API (iTunes Search API – İlgi alanları için)
-- Hosting: [Hosting Dünyam](www.hostingdunyam.net)
+- Hosting: www.hostingdunyam.net
 
 ---
 
 ## 🌐 Canlı Önizleme
 
 📌 Proje Yayın Linki:  
-[www.enescagri.online](www.enescagri.online)
+(www.enescagri.online)
 
 ---
 
@@ -60,5 +60,4 @@ Minimum 10 farklı güncelleme sağlanacaktır.
 Projede hazır tema kullanılmamıştır. Tüm tasarım Bootstrap bileşenleri ile sıfırdan oluşturulmuştur.
 
 # webtek-project
-www.enescagricaliskan.com.tr
-
+www.enescagri.online
