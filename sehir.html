@@ -8,15 +8,6 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    .slider-img {
-      height: 360px;
-      object-fit: cover;
-    }
-    .carousel-caption h5 {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 6px 12px;
-      border-radius: 6px;
-    }
     section h2 {
       font-weight: 600;
       color: #00ff88;
@@ -36,61 +27,37 @@
       });
   </script>
 
-  <div id="sehirSlider" class="carousel slide container mt-5" data-bs-ride="carousel">
-    <div class="carousel-inner rounded">
-      <div class="carousel-item active">
-        <a href="#konuralp">
-          <img src="img/konuralp.jpg" class="d-block w-100 slider-img" alt="Konuralp Antik Tiyatrosu">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Konuralp Antik Tiyatrosu</h5>
-          </div>
-        </a>
-      </div>
-      <div class="carousel-item">
-        <a href="#guzeldere">
-          <img src="img/guzeldere.jpg" class="d-block w-100 slider-img" alt="Güzeldere Şelalesi">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Güzeldere Şelalesi</h5>
-          </div>
-        </a>
-      </div>
-      <div class="carousel-item">
-        <a href="#aydinpinar">
-          <img src="img/aydinpinar.jpg" class="d-block w-100 slider-img" alt="Aydınpınar Şelalesi">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Aydınpınar Şelalesi</h5>
-          </div>
-        </a>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
-
   <main class="container my-5 bg-dark p-4 rounded">
     <section>
-      <h2>Nüfus</h2>
-      <p>Düzce'nin 2023 itibarıyla nüfusu yaklaşık 405.000'dir. Karadeniz ile Marmara arasında yer alır.</p>
+      <h2>Düzce'nin Tarihi</h2>
+      <p>Düzce, tarih boyunca birçok medeniyete ev sahipliği yapmıştır. Antik dönemde "Prusias ad Hypium" adıyla bilinen bu bölge, Roma ve Bizans dönemlerinde önemli bir yerleşim merkezi olmuştur. Osmanlı döneminde de önemli bir konaklama ve ticaret noktası olma özelliğini sürdürmüştür.</p>
+      <p>1999 yılında yaşanan iki büyük deprem sonrasında, 1999 yılında Türkiye'nin 81. ili olarak il statüsüne kavuşmuştur. Bu gelişme, Düzce'nin idari olarak da öne çıkmasını sağlamıştır.</p>
     </section>
 
-    <section id="konuralp">
-      <h2>Konuralp Antik Tiyatrosu</h2>
-      <p>Roma dönemine ait bu tiyatro, Batı Karadeniz’in Efes’i olarak bilinir.</p>
+    <section id="duzce-tarihi" class="mt-5">
+      <h2 class="text-success text-center mb-4">Düzce'nin Geçmişinden Kareler</h2>
+      <div class="row g-5">
+        <div class="col-md-6">
+          <div class="card bg-dark text-white border-success shadow">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Duzce_1999_earthquake_damage_Bilham_893.jpg/640px-Duzce_1999_earthquake_damage_Bilham_893.jpg" class="card-img-top" alt="12 Kasım 1999 Düzce Depremi">
+            <div class="card-body">
+              <p class="card-text">12 Kasım 1999 Düzce Depremi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-dark text-white border-success shadow">
+            <img src="img/konuralp.jpg" class="card-img-top" alt="Konuralp Antik Tiyatro">
+            <div class="card-body">
+              <p class="card-text">Konuralp Antik Tiyatrosu</p>
+            </div>
+          </div>
+        </div>  
+      </div>
     </section>
-
-    <section id="guzeldere">
-      <h2>Güzeldere Şelalesi</h2>
-      <p>Doğal güzelliğiyle kamp ve yürüyüş için ideal bir bölgedir.</p>
-    </section>
-
-    <section id="aydinpinar">
-      <h2>Aydınpınar Şelalesi</h2>
-      <p>Şehir merkezine yakınlığı ile yerli turistler tarafından sıkça ziyaret edilir.</p>
-    </section>
+    <div class="text-center mt-5">
+      <a href="mirasimiz.html" class="btn btn-success">Düzce'nin Kültürel Mirasını Gör</a>
+    </div>
   </main>
 
   <footer class="bg-black text-success text-center py-4">
@@ -105,3 +72,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+

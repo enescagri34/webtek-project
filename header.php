@@ -7,8 +7,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa - Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
         <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
         <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
 
